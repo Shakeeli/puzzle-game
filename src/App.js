@@ -30,10 +30,10 @@ const App = () => {
     const [timerStarted, setTimerStarted] = useState(false); // Track if timer has started
 
 
-    useEffect(() => {
+   useEffect(() => {
+    shuffleBoard(); 
+}, [shuffleBoard]);  
 
-        shuffleBoard();
-    }, []);
 
     const shuffleBoard = () => {
         const shuffledBoard = shuffleArray([...board]);
